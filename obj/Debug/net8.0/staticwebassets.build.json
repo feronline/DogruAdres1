@@ -1,0 +1,58 @@
+{
+  "Version": 1,
+  "Hash": "pL/jjzSdzfLynrRIb+Bu68OYUSLv74lvWYmR9232wdw=",
+  "Source": "DogruAdres",
+  "BasePath": "_content/DogruAdres",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "DogruAdres\\wwwroot",
+      "Source": "DogruAdres",
+      "ContentRoot": "C:\\Users\\ferha\\OneDrive\\Masaüstü\\DogruAdres\\wwwroot\\",
+      "BasePath": "_content/DogruAdres",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\ferha\\OneDrive\\Masaüstü\\DogruAdres\\wwwroot\\css\\styles.css",
+      "SourceId": "DogruAdres",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ferha\\OneDrive\\Masaüstü\\DogruAdres\\wwwroot\\",
+      "BasePath": "_content/DogruAdres",
+      "RelativePath": "css/styles.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\styles.css"
+    },
+    {
+      "Identity": "C:\\Users\\ferha\\OneDrive\\Masaüstü\\DogruAdres\\wwwroot\\js\\script.js",
+      "SourceId": "DogruAdres",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ferha\\OneDrive\\Masaüstü\\DogruAdres\\wwwroot\\",
+      "BasePath": "_content/DogruAdres",
+      "RelativePath": "js/script.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\script.js"
+    }
+  ]
+}

@@ -1,32 +1,24 @@
-# .NET 8.0 SDK image'ını base olarak kullan
+# 1) Build & publish
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+WORKDIR /src
 
-# Çalışma dizinini ayarla
-WORKDIR /app
-
-# Proje dosyasını kopyala
-COPY DogruAdres.csproj .
-
-# Dependencies'leri restore et
+# bağımlılık katmanlarını önbelleklemek için önce csproj
+COPY DogruAdres.csproj ./
 RUN dotnet restore
 
-# Tüm kaynak kodları kopyala
-COPY . .
+# kaynakları kopyala ve publish et
+COPY . ./
+RUN dotnet publish -c Release -o /app/publish /p:UseAppHost=false
 
-# Uygulamayı build et
-RUN dotnet build -c Release -o /app/build
-
-# Publish işlemi için yeni stage
+# 2) Runtime
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime
-
-# Çalışma dizinini ayarla
 WORKDIR /app
 
-# Build edilmiş dosyaları kopyala
-COPY --from=build /app/build .
+# publish çıktısını kopyala (statik dosyalar dahil)
+COPY --from=build /app/publish ./
 
-# 4949 portunu expose et
+# prod URL
+ENV ASPNETCORE_URLS=http://0.0.0.0:4949
 EXPOSE 4949
 
-# Uygulamayı 4949 portunda çalıştır
-ENTRYPOINT ["dotnet", "DogruAdres.dll", "--urls", "http://0.0.0.0:4949"]
+ENTRYPOINT ["dotnet", "DogruAdres.dll"]
