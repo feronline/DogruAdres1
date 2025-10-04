@@ -1,0 +1,188 @@
+@{
+    ViewData["Title"] = "DoğruAdres - Güvenilir Yardım Kaynakları";
+    ViewData["Description"] = "Türkiye'de güvenilir acil numaralar, doğrulanmış yardım kuruluşları ve bağış linklerini bulun. Sadece resmi ve doğrulanmış kaynaklar.";
+}
+
+<!-- Hero Section -->
+<section class="hero">
+    <!-- Animated Background -->
+    <div class="hero-background">
+        <div class="floating-orb orb-1"></div>
+        <div class="floating-orb orb-2"></div>
+        <div class="floating-orb orb-3"></div>
+        <div class="floating-orb orb-4"></div>
+        <div class="floating-orb orb-5"></div>
+    </div>
+    
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress" id="scroll-progress"></div>
+    
+    <div class="hero-container">
+        <div class="hero-content">
+            <h1 class="hero-title" data-aos="fade-up" data-aos-delay="200">
+                <span class="typing-text">DoğruAdres</span>
+            </h1>
+            <h2 class="hero-subtitle" data-aos="fade-up" data-aos-delay="400">Güvenilir Yardım Kaynakları</h2>
+            <p class="hero-description" data-aos="fade-up" data-aos-delay="600">
+                Acil durumlarda ve yardım yapmak istediğinizde güvenilir kaynaklara tek tıkla ulaşın. Tüm kurumlar doğrulanmış ve resmi kaynaklardan derlenmiştir.
+            </p>
+        </div>
+    </div>
+    
+    <!-- Scroll Indicator -->
+    <div class="scroll-indicator" data-aos="fade-up" data-aos-delay="1000">
+        <div class="scroll-arrow">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </div>
+</section>
+
+<!-- About/Mission Section -->
+<section class="about-section" data-aos="fade-up">
+    <div class="container">
+        <div class="about-content">
+            <div class="about-badge">
+                <span>📍 Güvenilir Kaynak</span>
+            </div>
+            <h2 class="about-title">Neden DoğruAdres?</h2>
+            <p class="about-text">
+                İnternette yardım aramak bazen kafa karıştırıcı olabiliyor. Hangi kurum güvenilir? 
+                Bu bağış linki gerçek mi? Acil bir durumda kimi aramalıyım?
+            </p>
+            <p class="about-text">
+                DoğruAdres, bu soruların cevabını veriyor. Sitemizde yer alan her kuruluş, her telefon 
+                numarası ve her bağış linki titizlikle araştırılmış ve doğrulanmıştır. Sadece resmi kurumlar, 
+                devlet destekli organizasyonlar ve güvenilir sivil toplum kuruluşları listelenmektedir.
+            </p>
+            <div class="about-mission">
+                <h3>Amacımız Basit:</h3>
+                <p>Yardım etmek isteyen insanlarla, yardıma ihtiyacı olan insanları doğru ve güvenilir 
+                kaynaklarla buluşturmak.</p>
+            </div>
+            <p class="about-tagline">
+                İster acil bir durumda olun, ister düzenli bağış yapmak isteyin, ister sokak hayvanlarına 
+                yardım etmek isteyin - <strong>doğru adres her zaman burada.</strong>
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Categories Section -->
+<section class="categories-section">
+    <div class="container">
+        <h2 class="section-title">Yardım Kategorileri</h2>
+        <p class="section-subtitle">İhtiyacınız olan yardım türünü seçin</p>
+        
+        <div class="category-grid">
+            
+            <!-- Card 1: Acil Numaralar -->
+            <a href="@Url.Action("Index", "AcilNumaralar")" class="category-card">
+                <div class="card-icon">
+                    <i class="fas fa-phone-alt"></i>
+                </div>
+                <h3 class="card-title">Acil Numaralar</h3>
+                <p class="card-description">112, 110, 155 gibi acil numaralar ve resmi kurumlar</p>
+                <div class="card-arrow">
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+            </a>
+
+            <!-- Card 2: Yangın Olayları -->
+            <a href="@Url.Action("Index", "YanginOlaylari")" class="category-card">
+                <div class="card-icon">
+                    <i class="fas fa-fire"></i>
+                </div>
+                <h3 class="card-title">Yangın Olayları</h3>
+                <p class="card-description">Yangın mağdurlarına yardım yapabileceğiniz güvenilir kurumlar</p>
+                <div class="card-arrow">
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+            </a>
+
+            <!-- Card 3: Deprem, Sel ve Afet -->
+            <a href="@Url.Action("Index", "DepremAfet")" class="category-card">
+                <div class="card-icon">
+                    <i class="fas fa-house-damage"></i>
+                </div>
+                <h3 class="card-title">Deprem, Sel ve Afet</h3>
+                <p class="card-description">Deprem, sel ve afet durumlarında yardım kuruluşları</p>
+                <div class="card-arrow">
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+            </a>
+
+            <!-- Card 4: Savaş Yardımları -->
+            <a href="@Url.Action("Index", "SavasYardimlari")" class="category-card">
+                <div class="card-icon">
+                    <i class="fas fa-dove"></i>
+                </div>
+                <h3 class="card-title">Savaş Yardımları</h3>
+                <p class="card-description">Savaş mağdurlarına insani yardım yapan uluslararası kurumlar</p>
+                <div class="card-arrow">
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+            </a>
+
+            <!-- Card 5: Sokak Hayvanları -->
+            <a href="@Url.Action("Index", "SokakHayvanlari")" class="category-card">
+                <div class="card-icon">
+                    <i class="fas fa-paw"></i>
+                </div>
+                <h3 class="card-title">Sokak Hayvanları</h3>
+                <p class="card-description">Sokak hayvanlarına yardım edebileceğiniz dernekler ve veterinerler</p>
+                <div class="card-arrow">
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+            </a>
+
+            <!-- Card 6: Giyim ve Yemek Yardımları -->
+            <a href="@Url.Action("Index", "GiyimYemek")" class="category-card">
+                <div class="card-icon">
+                    <i class="fas fa-hands-helping"></i>
+                </div>
+                <h3 class="card-title">Giyim ve Yemek Yardımları</h3>
+                <p class="card-description">İhtiyaç sahiplerine gıda ve giyim yardımı yapan kurumlar</p>
+                <div class="card-arrow">
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+            </a>
+
+        </div>
+    </div>
+</section>
+
+<!-- Statistics Section -->
+<section class="statistics">
+    <div class="container">
+        <div class="stats-grid">
+            <div class="stat-item" data-aos="fade-up" data-aos-delay="100">
+                <div class="stat-icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <div class="stat-number" data-count="50">0</div>
+                <div class="stat-label">Güvenilir Kaynak</div>
+            </div>
+            <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
+                <div class="stat-icon">
+                    <i class="fas fa-th-large"></i>
+                </div>
+                <div class="stat-number">6</div>
+                <div class="stat-label">Kategori</div>
+            </div>
+            <div class="stat-item" data-aos="fade-up" data-aos-delay="300">
+                <div class="stat-icon">
+                    <i class="fas fa-clock"></i>
+                </div>
+                <div class="stat-number">7/24</div>
+                <div class="stat-label">Erişilebilir</div>
+            </div>
+            <div class="stat-item" data-aos="fade-up" data-aos-delay="400">
+                <div class="stat-icon">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <div class="stat-number" data-count="100">0</div>
+                <div class="stat-label">Doğrulanmış</div>
+            </div>
+        </div>
+    </div>
+</section>

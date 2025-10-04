@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"] - DoğruAdres</title>
+    <meta name="description" content="@ViewData["Description"]">
+    <link rel="stylesheet" href="~/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Animation Libraries -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/2.6.2/countUp.umd.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+</head>
+<body>
+    <!-- Minimal Header -->
+    <header class="minimal-header">
+        <a href="@Url.Action("Index", "Home")" class="logo-link">
+            <div class="logo">
+                <span>DoğruAdres</span>
+            </div>
+        </a>
+    </header>
+    
+    @if (ViewContext.RouteData.Values["controller"].ToString() != "Home")
+    {
+        <!-- Back to Homepage Button -->
+        <a href="@Url.Action("Index", "Home")" class="back-to-home">
+            <i class="fas fa-arrow-left"></i>
+            <span>Ana Sayfa</span>
+        </a>
+    }
+
+    @RenderBody()
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title">Güvenilir Yardım Kaynakları</h3>
+                    <p class="footer-description">
+                        Bu site Sakarya Üniversitesi gençlik ve gönüllülük dersi kapsamında insanlara yardım ve destek olma amacıyla hazırlanmıştır.
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-subtitle">Hızlı Erişim</h4>
+                    <ul class="footer-links">
+                        <li><a href="@Url.Action("Index", "AcilNumaralar")">Acil Numaralar</a></li>
+                        <li><a href="@Url.Action("Index", "YanginOlaylari")">Yangın Olayları</a></li>
+                        <li><a href="@Url.Action("Index", "DepremAfet")">Deprem & Afet</a></li>
+                        <li><a href="@Url.Action("Index", "SavasYardimlari")">Savaş Yardımları</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-subtitle">Bilgi</h4>
+                    <p class="footer-info">
+                        <i class="fas fa-calendar-alt"></i>
+                        Son güncelleme: <span id="last-update"></span>
+                    </p>
+                    <p class="footer-info">
+                        <i class="fas fa-info-circle"></i>
+                        Tüm linkler yeni sekmede açılır
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Güvenilir Yardım Kaynakları. Tüm hakları saklıdır.</p>
+                <button class="back-to-top" id="back-to-top">
+                    <i class="fas fa-arrow-up"></i>
+                </button>
+            </div>
+        </div>
+    </footer>
+
+    <script src="~/js/script.js"></script>
+</body>
+</html>
